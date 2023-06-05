@@ -26,11 +26,13 @@ code blocks for commands
 ```
 
 ## Help
+<details>
+  <summary>Solutions to some problems</summary>
+  Write to us, we will be very happy to help you 😄
+  
+</details>
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+
 
 ## Authors
 
