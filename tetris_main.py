@@ -12,3 +12,7 @@ def draw_grid():
 
 def draw_score():
     pass
+
+
+def check_grid():
+    pass
