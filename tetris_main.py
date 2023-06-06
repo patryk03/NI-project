@@ -2,7 +2,6 @@ import turtle
 import time
 import random
 
-
 class Shape:
     def __init__(self):
         self.y = 0
