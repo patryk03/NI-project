@@ -97,4 +97,8 @@ wn.tracer(0)
 | `turtle.forward(distance)` | Move the turtle forward by the specified distance, in the direction the turtle is headed. |
 | `turtle.pendown()` | Pull the pen down – drawing when moving |
 
+![piesek](animals/dog.jpg)
+
+
+
 ## Patryk
