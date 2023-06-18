@@ -34,7 +34,7 @@ wn.tracer(0)
 
 ![piesek](animals/dog.jpg)
 
-![na zdjeciu jest jeż](animals/hedgehog.jpg)
+![na zdjeciu jest jez](animals/hedgehog.jpg)
 
 
 
