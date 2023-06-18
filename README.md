@@ -63,7 +63,7 @@ Inspiration, code snippets, etc.
 * [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
 
 
-## Edycja readme przez członków zespołu
+# Edycja readme przez członków zespołu
 
 ## Gaba
 ## Bartek
@@ -91,5 +91,10 @@ wn.bgcolor("black")
 wn.setup(width=600, height=800)
 wn.tracer(0) 
 ```
+
+| Komenda | Opis |
+| --- | --- |
+| `turtle.forward(distance)` | Move the turtle forward by the specified distance, in the direction the turtle is headed. |
+| `turtle.pendown()` | Pull the pen down – drawing when moving |
 
 ## Patryk
