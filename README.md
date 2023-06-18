@@ -61,3 +61,35 @@ Inspiration, code snippets, etc.
 * [dbader](https://github.com/dbader/readme-template)
 * [zenorocha](https://gist.github.com/zenorocha/4526327)
 * [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+
+
+## Edycja readme przez członków zespołu
+
+## Gaba
+## Bartek
+
+## Lidia
+
+Grawitacja w grze TETRIS
+* W różnych wersjach Tetrisa oraz grach opartych na tym schemacie istnieją co najmniej trzy algorytmy obsługujące spadanie elementów po usunięciu wiersza
+Oryginalny algorytm: po usunięciu wiersza leżące ponad nim elementy spadają o poziom w dół (analogicznie w przypadku gdy usunięto za jednym razem większą liczbę wierszy), ale nie dalej, nawet jeśli jakaś kolumna elementów mogłaby spaść dalej.
+* Popularny[potrzebny przypis] algorytm będący modyfikacją oryginalnego: po usunięciu wiersza kolumny elementów nad nim przesuwają się w dół (przy zachowaniu względnego położenia klocków w kolumnie) najniżej, jak jest to możliwe. O ile w oryginalnym algorytmie usunięcie wiersza (lub wierszy) nie pociągało za sobą kolejnych, tak w tym przypadku taka sytuacja może zajść (gdy np. element spadającej kolumny wypełni jedyne puste pole w wierszu niżej).
+* Algorytm najbardziej odległy od oryginału, wykorzystywany w bardziej złożonych grach opartych na tym samym pomyśle co Tetris: usunięcie wiersza pociąga za sobą reorganizację zarówno elementów nad, jak i pod nim – wszystkie elementy, nie zachowując względnego położenia w kolumnach, przesuwają się w dół planszy tak, że wypełniają wszystkie luki powstałe pomiędzy nimi w trakcie gry. Podobnie jak w poprzednim przypadku, może to pociągnąć za sobą usunięcie kolejnych wierszy elementów.
+
+Niektóre rodzaje bloków:
+1. Tetrimino „I” – cztery elementy w jednym szeregu
+2. Tetrimino „O” – cztery elementy połączone w kwadrat
+3. Tetrimino „J” – trzy elementy w rzędzie i jeden dołączony do prawego elementu od spodu
+
+Źródło: [wikipedia](https://pl.wikipedia.org/wiki/Tetris)
+
+Fragment kodu z naszej implementacji gry:
+```python
+wn = turtle.Screen()
+wn.title("tetris")
+wn.bgcolor("black")
+wn.setup(width=600, height=800)
+wn.tracer(0) 
+```
+
+## Patryk
