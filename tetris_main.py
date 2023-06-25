@@ -100,7 +100,26 @@ def draw_grid(pen, grid):
             pen.stamp()
 
 
-            
+def check_grid(grid):
+    #check if bottom row is full
+    y = 23
+    while y > 0: 
+        is_full = True
+        for x in range(0,12):
+            if grid[y][x] == 0:
+                is_full = False
+                y -= 1
+                break
+
+        if is_full:
+            global score
+            score += 10
+            draw_score(pen, score)
+            for copy_y in range(y, 0, -1):
+                for copy_x in range(0, 12):
+                    grid[copy_y][copy_x] = grid[copy_y - 1][copy_x]
+
+           
 
 def draw_score():
     pass
@@ -108,3 +127,7 @@ def draw_score():
 
 def check_grid():
     pass
+
+
+
+#dopisac w komentarzu co jeszcze opracować
