@@ -118,7 +118,7 @@ def check_grid(grid):
             for copy_y in range(y, 0, -1):
                 for copy_x in range(0, 12):
                     grid[copy_y][copy_x] = grid[copy_y - 1][copy_x]
-
+<<<<<<< konflikty
 def move_left(grid):
     # Chech if it is possible to move left
     for y in range(len(grid)):
@@ -126,6 +126,7 @@ def move_left(grid):
             if grid[y][x] != 0:
                 if x == 0 or grid[y][x - 1] != 0:
                     return  
+<<<<<<< main
     # Move left
     for y in range(len(grid)):
         for x in range(len(grid[y])):
