@@ -1,83 +1,17 @@
 import turtle
 import time
 import random
-
+<<<<<<<< second_branch_for_conflict
 class Shape:
         def __init__(self):
                 self.y = 0
                 self.x = 5
                 self.color = random.randint(1, 7)
                 square =[[1,1],
-                        [1,1]]
-
-                hline = [[1,1,1,1]]
-
-                vline =[[1],
-                        [1],
-                        [1],
-                        [1]]
+<<<<<<< the conflict should be                        
+                [1,1]]
 
                 rightl =[[1,0,0,0],
-                        [1,1,1,1]]
-
-                leftl =[[0,0,0,1],
-                        [1,1,1,1]]
-
-                zshape =[[1,1,0],
-                        [0,1,1]]
-
-                stairs =[[0,1,0],
-                        [1,1,1]]
-
-                shapes = [square, hline, vline, rightl, leftl, zshape, stairs]
-
-                self.shape = random.choice(shapes)
-
-                self.height = len(self.shape) 
-                self.width = len(self.shape[0])
-        
-        # def move_left(self, grid): 
-        # def move_right(self, grid):
-        # def draw_shape(self, grid):
-        # def erase_shape(self, grid):
-        # def can_move(self, grid):
-        # def rotate(self, grid):
-
-
-grid = [
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-]
-
-
-
-pen = turtle.Turtle()
-pen.penup()
-pen.speed(0)
-pen.shape("square")
-pen.setundobuffer(None) #nadlatuja nowe bloki
 
 
 
@@ -99,12 +33,12 @@ def draw_grid(pen, grid):
             pen.goto(screen_x, screen_y)
             pen.stamp()
 
-
+>>>> main
 def check_grid(grid):
     #check if bottom row is full
     y = 23
     while y > 0: 
-        is_full = True
+test
         for x in range(0,12):
             if grid[y][x] == 0:
                 is_full = False
