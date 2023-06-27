@@ -2,6 +2,12 @@
 
 ## Gaba
 ## Bartek
+Kolorystyka w grze TETRIS
+Plansza gry Tetris składa się z czarnego lub ciemnego tła, które kontrastuje z kolorowymi klockami. Klocki w Tetrisie występują w różnych kolorach, zwykle są to jasne, intensywne barwy - czerwony, niebieski, zielony, żółty i fioletowy. 
+
+Każdy klocek ma swój unikalny kolor, co ułatwia graczowi ich rozróżnienie podczas rozgrywki. Kontrast między jasnymi kolorami klocków a ciemnym tłem planszy zapewnia czytelność i przejrzystość gry, co jest ważne dla szybkiego podejmowania decyzji przez gracza.
+
+Możliwość dostosowania kolorystyki według preferencji gracza. Można zmieniać kolory klocków, tła czy innych elementów graficznych, by pozwolić na spersonalizowanie wizualnego doświadczenia gry.
 
 ## Lidia
 
