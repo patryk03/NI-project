@@ -2,6 +2,12 @@ import turtle
 import time
 import random
 
+def __init__(self):
+                self.y = 0
+                self.x = 5
+                self.color = random.randint(1, 7)
+                square =[[1,1],
+                        [1,1]]
 class Shape:
         def __init__(self):
                 self.y = 0
