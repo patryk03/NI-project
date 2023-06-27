@@ -141,6 +141,9 @@ def draw_score():
 
 def check_grid():
     pass
+        
+def move_left(grid):
+        pass
 
 
 
