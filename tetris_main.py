@@ -1,7 +1,7 @@
 import turtle
 import time
 import random
-square =[[1,1],
+
 class Shape:
         def __init__(self):
                 self.y = 0
