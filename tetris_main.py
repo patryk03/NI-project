@@ -119,6 +119,20 @@ def check_grid(grid):
                 for copy_x in range(0, 12):
                     grid[copy_y][copy_x] = grid[copy_y - 1][copy_x]
 
+def move_left(grid):
+    # Chech if it is possible to move left
+    for y in range(len(grid)):
+        for x in range(len(grid[y])):
+            if grid[y][x] != 0:
+                if x == 0 or grid[y][x - 1] != 0:
+                    return  
+    # Move left
+    for y in range(len(grid)):
+        for x in range(len(grid[y])):
+            if grid[y][x] != 0:
+                grid[y][x - 1] = grid[y][x]  
+                grid[y][x] = 0  
+
            
 
 def draw_score():
