@@ -5,6 +5,11 @@ import random
 wn = turtle.Screen()
 wn.title("tetris")
 wn.bgcolor("black")
+wn.setup(width=600, height=800)
+wn.tracer(0) #turns off the screen updates
+
+delay = 0.1
+
 
 
 class Shape:
