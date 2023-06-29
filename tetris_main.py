@@ -2,6 +2,13 @@ import turtle
 import time
 import random
 
+
+wn.setup(width=600, height=800)
+wn.tracer(0) #turns off the screen updates
+
+delay = 0.1
+
+
 class Shape:
         def __init__(self):
                 self.y = 0
