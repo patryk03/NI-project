@@ -2,6 +2,11 @@ import turtle
 import time
 import random
 
+wn = turtle.Screen()
+wn.title("tetris")
+wn.bgcolor("black")
+
+
 class Shape:
         def __init__(self):
                 self.y = 0
