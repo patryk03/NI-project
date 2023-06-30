@@ -5,7 +5,9 @@ MOC SPOWALNIANIA
 Moc spowolnienia to specjalna umiejętność dostępna w grze Tetris, która pozwala graczu na tymczasowe zmniejszenie prędkości spadania klocków. Gdy moc spowolnienia zostanie zdobyta, gracze mogą aktywować ją w dowolnym momencie, aby uzyskać przewagę i lepiej kontrolować klocki.
 
 Po aktywowaniu mocy klocki przez 5 sekund lecą 2 razy wolniej ułatwiając graczom ulożenie klocków w korzystny dla nich sposób.
-NO
+zmieniam na swoje
+
+Decyzja zostaje podjęta przez gracza poprzed kliknięcie spacji
 
 
 Dlaczego tempo gry jest istotne:[YouTube] (https://www.youtube.com/watch?v=dHeLjKB2DKc&ab_channel=okCobalt)
