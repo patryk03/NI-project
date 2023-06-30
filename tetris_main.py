@@ -9,7 +9,7 @@ wn.setup(width=600, height=800)
 wn.tracer(0) #turns off the screen updates
 
 delay = 0.1
-
+slow_down = False
 
 
 class Shape:
@@ -154,6 +154,15 @@ def check_grid():
         
 def move_left(grid):
         pass
+
+def power_up():
+    global slow_down
+    slow_down = True
+    pen.speed(0)
+    # Ustaw czas trwania spowolnienia (np. 5 sekund)
+    time.sleep(5)
+    pen.speed(5)
+    slow_down = False
 
 
 
