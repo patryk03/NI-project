@@ -75,7 +75,7 @@ The main goal of our project is to create a simple game and learn IT tools in th
 
 ### Installing
 
-* Install python Ide: Pycharm, Visual Code...
+* Install some python Ide: Pycharm, Visual Code, and run our code on it
 
 ### Executing program
 
