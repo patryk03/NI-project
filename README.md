@@ -80,9 +80,6 @@ The main goal of our project is to create a simple game and learn IT tools in th
 ### Executing program
 
 * Run the main file of the program
-```
-code blocks for commands
-```
 
 ## Help
 <details>
