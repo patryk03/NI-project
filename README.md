@@ -1,16 +1,30 @@
 # Edycja readme przez członków zespołu
 
 ## Gaba
-MOC SPOWALNIANIA
-Moc spowolnienia to specjalna umiejętność dostępna w grze Tetris, która pozwala graczu na tymczasowe zmniejszenie prędkości spadania klocków. Gdy moc spowolnienia zostanie zdobyta, gracze mogą aktywować ją w dowolnym momencie, aby uzyskać przewagę i lepiej kontrolować klocki.
+Rotacja klocka w grze Tetris
 
-Po aktywowaniu mocy klocki przez 5 sekund lecą 2 razy wolniej ułatwiając graczom ulożenie klocków w korzystny dla nich sposób.
-zmieniam na swoje
+Funkcja rotacji klocka w grze Tetris jest odpowiedzialna za obracanie aktualnie spadającego klocka w lewo wokół jego środka. Obrót klocka jest kluczowym elementem rozgrywki, ponieważ pozwala graczowi na lepsze dopasowanie klocka do istniejącej konfiguracji na planszy, co może prowadzić do wypełnienia linii i zdobycia punktów.
+Implementacja rotacji
 
+Poniższy fragment kodu przedstawia implementację funkcji rotacji klocka w grze Tetris:
+'''python
+def rotate(self, grid):
+  self.erase_shape(grid)
+  rotated_shape = []
+  for x in range(len(self.shape[0])):
+      new_row = []
+      for y in range(len(self.shape)-1, -1, -1):
+          new_row.append(self.shape[y][x])
+      rotated_shape.append(new_row)
+  
+  right_side = self.x + len(rotated_shape[0])
+  if right_side < len(grid[0]):
+      self.shape = rotated_shape
+      # update height and width
+      self.height = len(self.shape)
+      self.width = len(self.shape[0])
+'''
 
-
-Dlaczego tempo gry jest istotne:[YouTube] (https://www.youtube.com/watch?v=dHeLjKB2DKc&ab_channel=okCobalt)
-Funkcjonalnośc jeszcze nie w pełni działa
 ## Bartek
 Kolorystyka w grze TETRIS
 Plansza gry Tetris składa się z czarnego lub ciemnego tła, które kontrastuje z kolorowymi klockami. Klocki w Tetrisie występują w różnych kolorach, zwykle są to jasne, intensywne barwy - czerwony, niebieski, zielony, żółty i fioletowy. 
@@ -100,4 +114,8 @@ Contributors names and contact info
 - Lidia  
 - Bartek  
 
+
+## Other ideas
+
+Slowing down the block: [Example](https://www.youtube.com/watch?v=dHeLjKB2DKc&ab_channel=okCobalt)
 
