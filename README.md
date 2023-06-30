@@ -7,6 +7,7 @@ Moc spowolnienia to specjalna umiejętność dostępna w grze Tetris, która poz
 Po aktywowaniu mocy klocki przez 5 sekund lecą 2 razy wolniej ułatwiając graczom ulożenie klocków w korzystny dla nich sposób.
 
 Dlaczego tempo gry jest istotne:[YouTube] (https://www.youtube.com/watch?v=dHeLjKB2DKc&ab_channel=okCobalt)
+Funkcjonalnośc jeszcze nie w pełni działa
 ## Bartek
 Kolorystyka w grze TETRIS
 Plansza gry Tetris składa się z czarnego lub ciemnego tła, które kontrastuje z kolorowymi klockami. Klocki w Tetrisie występują w różnych kolorach, zwykle są to jasne, intensywne barwy - czerwony, niebieski, zielony, żółty i fioletowy. 
