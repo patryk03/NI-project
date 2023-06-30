@@ -9,7 +9,7 @@ wn.setup(width=600, height=800)
 wn.tracer(0) #turns off the screen updates
 
 delay = 0.1
-slow_down = False
+
 
 
 class Shape:
@@ -109,6 +109,27 @@ def draw_grid(pen, grid):
             pen.goto(screen_x, screen_y)
             pen.stamp()
 
+def move_left(grid):
+    # Chech if it is possible to move left
+    for y in range(len(grid)):
+        for x in range(len(grid[y])):
+            if grid[y][x] != 0:
+                if x == 0 or grid[y][x - 1] != 0:
+                    return  
+    # Move left
+    for y in range(len(grid)):
+        for x in range(len(grid[y])):
+            if grid[y][x] != 0:
+                grid[y][x - 1] = grid[y][x]  
+                grid[y][x] = 0  
+
+def move_right(self, grid):
+        if self.x < 12-self.width:
+            if grid[self.y][self.x + self.width] == 0:
+                self.erase_shape(grid)
+                self.x += 1
+
+
 
 def check_grid(grid):
     #check if bottom row is full
@@ -129,40 +150,18 @@ def check_grid(grid):
                 for copy_x in range(0, 12):
                     grid[copy_y][copy_x] = grid[copy_y - 1][copy_x]
 
-def move_left(grid):
-    # Chech if it is possible to move left
-    for y in range(len(grid)):
-        for x in range(len(grid[y])):
-            if grid[y][x] != 0:
-                if x == 0 or grid[y][x - 1] != 0:
-                    return  
-    # Move left
-    for y in range(len(grid)):
-        for x in range(len(grid[y])):
-            if grid[y][x] != 0:
-                grid[y][x - 1] = grid[y][x]  
-                grid[y][x] = 0  
 
            
 
-def draw_score():
-    pass
+def draw_score(pen, score):
+    pen.hideturtle()
+    pen.goto(100,200)
+    pen.write("score: {}".format(score), move=False, align="left", font=("Arial", 18, "normal"))
 
 
-def check_grid():
-    pass
-        
-def move_left(grid):
-        pass
 
-def power_up():
-    global slow_down
-    slow_down = True
-    pen.speed(0)
-    # Ustaw czas trwania spowolnienia (np. 5 sekund)
-    time.sleep(5)
-    pen.speed(5)
-    slow_down = False
+
+
 
 
 
