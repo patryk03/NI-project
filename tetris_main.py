@@ -45,18 +45,63 @@ class Shape:
 
                 self.height = len(self.shape) 
                 self.width = len(self.shape[0])
-        
-        # def move_left(self, grid): 
+
+        def move_left(self, grid):
+            if self.x > 0:
+                if grid[self.y][self.x - 1] == 0:
+                    self.erase_shape(grid)
+                    self.x -= 1
+
+        def move_right(self, grid):
+            if self.x < 12 - self.width:
+                if grid[self.y][self.x + self.width] == 0:
+                    self.erase_shape(grid)
+                    self.x += 1
+
+        def draw_shape(self, grid):
+            for y in range(self.height):
+                for x in range(self.width):
+                    if (self.shape[y][x] == 1):
+                        grid[self.y + y][self.x + x] = self.color
+
+        def erase_shape(self, grid):
+            for y in range(self.height):
+                for x in range(self.width):
+                    if (self.shape[y][x] == 1):
+                        grid[self.y + y][self.x + x] = 0
+
+        def can_move(self, grid):
+            result = True
+            for x in range(self.width):
+                # check if bottom is a 1
+                if (self.shape[self.height - 1][x] == 1):
+                    if (grid[self.y + self.height][self.x + x] != 0):
+                        result = False
+            return result
+
+        def rotate(self, grid):
+            self.erase_shape(grid)
+            rotated_shape = []
+            for x in range(len(self.shape[0])):
+                new_row = []
+                for y in range(len(self.shape) - 1, -1, -1):
+                    new_row.append(self.shape[y][x])
+                rotated_shape.append(new_row)
+
+            right_side = self.x + len(rotated_shape[0])
+            if right_side < len(grid[0]):
+                self.shape = rotated_shape
+                # update height and width
+                self.height = len(self.shape)
+                self.width = len(self.shape[0])
+
+        # def move_left(self, grid):
         # def move_right(self, grid):
         # def draw_shape(self, grid):
         # def erase_shape(self, grid):
         # def can_move(self, grid):
         # def rotate(self, grid):
-        def move_left(self, grid): 
-        if self.x > 0:
-            if grid[self.y][self.x - 1] == 0:
-                self.erase_shape(grid)
-                self.x -= 1
+
 
 grid = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -114,18 +159,10 @@ def draw_grid(pen, grid):
             pen.stamp()
 
 
-def move_right(self, grid):
-        if self.x < 12-self.width:
-            if grid[self.y][self.x + self.width] == 0:
-                self.erase_shape(grid)
-                self.x += 1
-
-
-
 def check_grid(grid):
     #check if bottom row is full
     y = 23
-    while y > 0: 
+    while y > 0:
         is_full = True
         for x in range(0,12):
             if grid[y][x] == 0:
@@ -142,8 +179,6 @@ def check_grid(grid):
                     grid[copy_y][copy_x] = grid[copy_y - 1][copy_x]
 
 
-           
-
 def draw_score(pen, score):
     pen.hideturtle()
     pen.goto(100,200)
@@ -152,21 +187,7 @@ def draw_score(pen, score):
 
 
 
-def rotate(self, grid):
-    self.erase_shape(grid)
-    rotated_shape = []
-    for x in range(len(self.shape[0])):
-        new_row = [None]
-        for y in range(len(self.shape)-1, -2, -2):
-            new_row.append(self.shape[y][x])
-        rotated_shape.append(new_row)
-    
-    right_side = self.x + len(rotated_shape[0])
-    if right_side < len(grid[0]):
-        self.shape = rotated_shape
-        #update height and width
-        self.height = len(self.shape)
-        self.width = len(self.shape[0])
+
 
 
 
