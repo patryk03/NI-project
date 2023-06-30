@@ -94,9 +94,9 @@ The main goal of our project is to create a simple game and learn IT tools in th
 
 Contributors names and contact info
 
-Patryk  
-Gaba  
-Lidia  
-Bartek  
+- Patryk  
+- Gaba  
+- Lidia  
+- Bartek  
 
 
