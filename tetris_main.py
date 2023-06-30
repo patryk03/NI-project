@@ -165,8 +165,8 @@ def rotate(self, grid):
     self.erase_shape(grid)
     rotated_shape = []
     for x in range(len(self.shape[0])):
-        new_row = []
-        for y in range(len(self.shape)-1, -1, -1):
+        new_row = [None]
+        for y in range(len(self.shape)-1, -2, -2):
             new_row.append(self.shape[y][x])
         rotated_shape.append(new_row)
     
