@@ -184,14 +184,65 @@ def draw_score(pen, score):
     pen.goto(100,200)
     pen.write("score: {}".format(score), move=False, align="left", font=("Arial", 18, "normal"))
 
+#creating the shape
+shape = Shape()
+
+#putting the shape to the grid
+for y in range(shape.height):
+    for x in range(shape.width):
+        grid[shape.y+y][shape.x+x] = shape.color
+
+#drawing initial grid
+#draw_grid(pen, grid)
+
+
+
+wn.listen()
+wn.onkeypress(lambda: shape.move_left(grid), chr(97)) #chr(97) = add
+wn.onkeypress(lambda: shape.move_right(grid), "d")
+wn.onkeypress(lambda: shape.rotate(grid), "space")
+
+
+#score to 0
+score = 0
+
+draw_score(pen, score)
+
+
+#main game loop
+while True:
+    wn.update()
+
+    #moving the shape
+    #next_cell = shape.y + 1
+    if shape.y == 23 - shape.height + 1:
+        shape = Shape() #kiedy ksztalt jest na samym dole, tworzy sie nowy 
+        check_grid(grid) #chek if the row is filled
+
+    elif shape.can_move(grid): #kiedy napotka niezerowa komorke zatrzyma sie lub kiedy napotka 23. wiersz grida
+        shape.erase_shape(grid)
+        
+        shape.y += 1
+
+        shape.draw_shape(grid)
+
+
+    else:
+        shape = Shape()
+        check_grid(grid)
+        
+
+    draw_score(pen, score)
+    draw_grid(pen, grid)
+    #check_full(grid, row, licznik)
+    
+
+    time.sleep(delay)
+
+
+
+wn.mainloop()
 
 
 
 
-
-
-
-
-
-
-#dopisac w komentarzu co jeszcze opracować
