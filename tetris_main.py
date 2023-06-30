@@ -161,6 +161,23 @@ def draw_score(pen, score):
 
 
 
+def rotate(self, grid):
+    self.erase_shape(grid)
+    rotated_shape = []
+    for x in range(len(self.shape[0])):
+        new_row = []
+        for y in range(len(self.shape)-1, -1, -1):
+            new_row.append(self.shape[y][x])
+        rotated_shape.append(new_row)
+    
+    right_side = self.x + len(rotated_shape[0])
+    if right_side < len(grid[0]):
+        self.shape = rotated_shape
+        #update height and width
+        self.height = len(self.shape)
+        self.width = len(self.shape[0])
+
+
 
 
 
