@@ -163,7 +163,7 @@ def draw_score(pen, score):
 
 def rotate(self, grid):
     self.erase_shape(grid)
-    rotated_shape = []
+    rotated_shape = [None]
     for x in range(len(self.shape[0])):
         new_row = []
         for y in range(len(self.shape)-1, -1, -1):
