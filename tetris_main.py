@@ -52,7 +52,11 @@ class Shape:
         # def erase_shape(self, grid):
         # def can_move(self, grid):
         # def rotate(self, grid):
-
+        def move_left(self, grid): 
+        if self.x > 0:
+            if grid[self.y][self.x - 1] == 0:
+                self.erase_shape(grid)
+                self.x -= 1
 
 grid = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -109,19 +113,6 @@ def draw_grid(pen, grid):
             pen.goto(screen_x, screen_y)
             pen.stamp()
 
-def move_left(grid):
-    # Chech if it is possible to move left
-    for y in range(len(grid)):
-        for x in range(len(grid[y])):
-            if grid[y][x] != 0:
-                if x == 0 or grid[y][x - 1] != 0:
-                    return  
-    # Move left
-    for y in range(len(grid)):
-        for x in range(len(grid[y])):
-            if grid[y][x] != 0:
-                grid[y][x - 1] = grid[y][x]  
-                grid[y][x] = 0  
 
 def move_right(self, grid):
         if self.x < 12-self.width:
